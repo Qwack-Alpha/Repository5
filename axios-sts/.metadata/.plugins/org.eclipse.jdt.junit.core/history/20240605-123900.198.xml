@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="anime" project="anime" tests="22" started="22" failures="2" errors="0" ignored="0">
+  <testsuite name="com.example.repo.AnimeRepositoryTest" time="0.711" displayname="AnimeRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.example.repo.AnimeRepositoryTest]">
+    <testcase name="testFindAll" classname="com.example.repo.AnimeRepositoryTest" time="0.693" displayname="testFindAll()" uniqueid="[engine:junit-jupiter]/[class:com.example.repo.AnimeRepositoryTest]/[method:testFindAll()]"/>
+    <testcase name="testSaveAndFind" classname="com.example.repo.AnimeRepositoryTest" time="0.017" displayname="testSaveAndFind()" uniqueid="[engine:junit-jupiter]/[class:com.example.repo.AnimeRepositoryTest]/[method:testSaveAndFind()]"/>
+  </testsuite>
+  <testsuite name="com.example.exception.GlobalExceptionHandlerTest" time="0.251" displayname="GlobalExceptionHandlerTest" uniqueid="[engine:junit-jupiter]/[class:com.example.exception.GlobalExceptionHandlerTest]">
+    <testcase name="testResourceNotFoundException" classname="com.example.exception.GlobalExceptionHandlerTest" time="0.247" displayname="testResourceNotFoundException()" uniqueid="[engine:junit-jupiter]/[class:com.example.exception.GlobalExceptionHandlerTest]/[method:testResourceNotFoundException()]"/>
+    <testcase name="testGlobalExceptionHandler" classname="com.example.exception.GlobalExceptionHandlerTest" time="0.003" displayname="testGlobalExceptionHandler()" uniqueid="[engine:junit-jupiter]/[class:com.example.exception.GlobalExceptionHandlerTest]/[method:testGlobalExceptionHandler()]"/>
+  </testsuite>
+  <testsuite name="com.example.controller.AnimeControllerTest" time="0.294" displayname="AnimeControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]">
+    <testsuite name="com.example.controller.AnimeControllerTest$CreateUpdateTests" time="0.242" displayname="CreateUpdateTests" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:CreateUpdateTests]">
+      <testcase name="testUpdateAnime_NotFound" classname="com.example.controller.AnimeControllerTest.CreateUpdateTests" time="0.231" displayname="testUpdateAnime_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:CreateUpdateTests]/[method:testUpdateAnime_NotFound()]"/>
+      <testcase name="testUpdateAnime" classname="com.example.controller.AnimeControllerTest.CreateUpdateTests" time="0.004" displayname="testUpdateAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:CreateUpdateTests]/[method:testUpdateAnime()]"/>
+      <testcase name="testAddAnime" classname="com.example.controller.AnimeControllerTest.CreateUpdateTests" time="0.005" displayname="testAddAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:CreateUpdateTests]/[method:testAddAnime()]"/>
+    </testsuite>
+    <testsuite name="com.example.controller.AnimeControllerTest$DeleteTests" time="0.022" displayname="DeleteTests" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:DeleteTests]">
+      <testcase name="testDeleteAnime" classname="com.example.controller.AnimeControllerTest.DeleteTests" time="0.017" displayname="testDeleteAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:DeleteTests]/[method:testDeleteAnime()]"/>
+      <testcase name="testDeleteAnime_NotFound" classname="com.example.controller.AnimeControllerTest.DeleteTests" time="0.004" displayname="testDeleteAnime_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:DeleteTests]/[method:testDeleteAnime_NotFound()]"/>
+    </testsuite>
+    <testsuite name="com.example.controller.AnimeControllerTest$ReadTests" time="0.025" displayname="ReadTests" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]">
+      <testcase name="testReadAnime_NotFound" classname="com.example.controller.AnimeControllerTest.ReadTests" time="0.007" displayname="testReadAnime_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]/[method:testReadAnime_NotFound()]"/>
+      <testcase name="testReadAnime" classname="com.example.controller.AnimeControllerTest.ReadTests" time="0.003" displayname="testReadAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]/[method:testReadAnime()]"/>
+      <testcase name="testReadOneAnime_NotFound" classname="com.example.controller.AnimeControllerTest.ReadTests" time="0.004" displayname="testReadOneAnime_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]/[method:testReadOneAnime_NotFound()]"/>
+      <testcase name="testReadAllAnime" classname="com.example.controller.AnimeControllerTest.ReadTests" time="0.004" displayname="testReadAllAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]/[method:testReadAllAnime()]"/>
+      <testcase name="testReadOneAnime" classname="com.example.controller.AnimeControllerTest.ReadTests" time="0.003" displayname="testReadOneAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]/[method:testReadOneAnime()]"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="com.example.AnimeApplicationTests" time="0.004" displayname="AnimeApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.example.AnimeApplicationTests]">
+    <testcase name="contextLoads" classname="com.example.AnimeApplicationTests" time="0.004" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.example.AnimeApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+  <testsuite name="com.example.model.AnimeTest" time="0.018" displayname="AnimeTest" uniqueid="[engine:junit-jupiter]/[class:com.example.model.AnimeTest]">
+    <testcase name="testInvalidRatingTooLow" classname="com.example.model.AnimeTest" time="0.013" displayname="testInvalidRatingTooLow()" uniqueid="[engine:junit-jupiter]/[class:com.example.model.AnimeTest]/[method:testInvalidRatingTooLow()]">
+      <failure>org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)&#13;
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)&#13;
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)&#13;
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)&#13;
+	at com.example.model.AnimeTest.testInvalidRatingTooLow(AnimeTest.java:70)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testAnimeNoArgsConstructor" classname="com.example.model.AnimeTest" time="0.0" displayname="testAnimeNoArgsConstructor()" uniqueid="[engine:junit-jupiter]/[class:com.example.model.AnimeTest]/[method:testAnimeNoArgsConstructor()]"/>
+    <testcase name="testAnimeAllArgsConstructor" classname="com.example.model.AnimeTest" time="0.001" displayname="testAnimeAllArgsConstructor()" uniqueid="[engine:junit-jupiter]/[class:com.example.model.AnimeTest]/[method:testAnimeAllArgsConstructor()]"/>
+    <testcase name="testSettersAndGetters" classname="com.example.model.AnimeTest" time="0.0" displayname="testSettersAndGetters()" uniqueid="[engine:junit-jupiter]/[class:com.example.model.AnimeTest]/[method:testSettersAndGetters()]"/>
+    <testcase name="testAnimeModel" classname="com.example.model.AnimeTest" time="0.0" displayname="testAnimeModel()" uniqueid="[engine:junit-jupiter]/[class:com.example.model.AnimeTest]/[method:testAnimeModel()]"/>
+    <testcase name="testInvalidRatingTooHigh" classname="com.example.model.AnimeTest" time="0.001" displayname="testInvalidRatingTooHigh()" uniqueid="[engine:junit-jupiter]/[class:com.example.model.AnimeTest]/[method:testInvalidRatingTooHigh()]">
+      <failure>org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.&#13;
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)&#13;
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)&#13;
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)&#13;
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)&#13;
+	at com.example.model.AnimeTest.testInvalidRatingTooHigh(AnimeTest.java:57)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="testValidRating" classname="com.example.model.AnimeTest" time="0.0" displayname="testValidRating()" uniqueid="[engine:junit-jupiter]/[class:com.example.model.AnimeTest]/[method:testValidRating()]"/>
+  </testsuite>
+</testrun>

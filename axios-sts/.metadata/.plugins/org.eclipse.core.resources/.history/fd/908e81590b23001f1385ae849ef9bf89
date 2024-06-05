@@ -1,0 +1,87 @@
+package com.example.model;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class AnimeTest {
+
+    @Test
+    public void testAnimeModel() {
+        Anime anime = new Anime();
+        anime.setId(1L);
+        anime.setName("Test Anime");
+        anime.setSynopsis("Test Synopsis");
+        anime.setRating(9.5f);
+
+        assertEquals(1L, anime.getId());
+        assertEquals("Test Anime", anime.getName());
+        assertEquals("Test Synopsis", anime.getSynopsis());
+        assertEquals(9.5f, anime.getRating());
+    }
+
+    @Test
+    public void testAnimeAllArgsConstructor() {
+        Anime anime = new Anime(1L, "Test Anime", "Test Synopsis", 9.5f);
+
+        assertEquals(1L, anime.getId());
+        assertEquals("Test Anime", anime.getName());
+        assertEquals("Test Synopsis", anime.getSynopsis());
+        assertEquals(9.5f, anime.getRating());
+    }
+
+    @Test
+    public void testAnimeNoArgsConstructor() {
+        Anime anime = new Anime();
+
+        assertNotNull(anime);
+    }
+
+    @Test
+    public void testSettersAndGetters() {
+        Anime anime = new Anime();
+        anime.setId(1L);
+        anime.setName("Test Anime");
+        anime.setSynopsis("Test Synopsis");
+        anime.setRating(9.5f);
+
+        assertEquals(1L, anime.getId());
+        assertEquals("Test Anime", anime.getName());
+        assertEquals("Test Synopsis", anime.getSynopsis());
+        assertEquals(9.5f, anime.getRating());
+    }
+
+    @Test
+    public void testInvalidRatingTooHigh() {
+        Anime anime = new Anime();
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            anime.setRating(11.0f);
+        });
+
+        String expectedMessage = "Rating must be between 0 and 10";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(expectedMessage));
+    }
+
+    @Test
+    public void testInvalidRatingTooLow() {
+        Anime anime = new Anime();
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            anime.setRating(-1.0f);
+        });
+
+        String expectedMessage = "Rating must be between 0 and 10";
+        String actualMessage = exception.getMessage();
+
+        assertTrue(actualMessage.contains(expectedMessage));
+    }
+
+    @Test
+    public void testValidRating() {
+        Anime anime = new Anime();
+        anime.setRating(5.0f);
+
+        assertEquals(5.0f, anime.getRating());
+    }
+}

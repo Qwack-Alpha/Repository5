@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="anime" project="anime" tests="15" started="15" failures="0" errors="2" ignored="0">
+  <testsuite name="com.example.repo.AnimeRepositoryTest" time="0.001" displayname="AnimeRepositoryTest" uniqueid="[engine:junit-jupiter]/[class:com.example.repo.AnimeRepositoryTest]">
+    <testcase name="testFindAll" classname="com.example.repo.AnimeRepositoryTest" time="0.0" displayname="testFindAll()" uniqueid="[engine:junit-jupiter]/[class:com.example.repo.AnimeRepositoryTest]/[method:testFindAll()]">
+      <error>java.lang.IllegalStateException: Failed to load ApplicationContext for [MergedContextConfiguration@735167e1 testClass = com.example.repo.AnimeRepositoryTest, locations = [], classes = [com.example.AnimeApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@67689c81 key = [org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcClientAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@c27d163, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5e39850, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@29f0c4f2, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@34be3d80, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@319e5c63, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@26e412ef, org.springframework.boot.test.context.SpringBootTestAnnotation@8b7026b9], contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]&#13;
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)&#13;
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)&#13;
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142)&#13;
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)&#13;
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)&#13;
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)&#13;
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)&#13;
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)&#13;
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)&#13;
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)&#13;
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)&#13;
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)&#13;
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)&#13;
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)&#13;
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)&#13;
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource': Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)&#13;
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)&#13;
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)&#13;
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)&#13;
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)&#13;
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)&#13;
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)&#13;
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)&#13;
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)&#13;
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463)&#13;
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)&#13;
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)&#13;
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)&#13;
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)&#13;
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)&#13;
+	... 17 more&#13;
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource': Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.&#13;
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)&#13;
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1337)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1167)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)&#13;
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)&#13;
+	... 32 more&#13;
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource': Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)&#13;
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)&#13;
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)&#13;
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)&#13;
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)&#13;
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)&#13;
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)&#13;
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)&#13;
+	... 42 more&#13;
+Caused by: java.lang.IllegalStateException: Failed to replace DataSource with an embedded database for tests. If you want an embedded database please put a supported one on the classpath or tune the replace attribute of @AutoConfigureTestDatabase.&#13;
+	at org.springframework.util.Assert.state(Assert.java:76)&#13;
+	at org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceFactory.getEmbeddedDatabase(TestDatabaseAutoConfiguration.java:188)&#13;
+	at org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration$EmbeddedDataSourceFactoryBean.afterPropertiesSet(TestDatabaseAutoConfiguration.java:153)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1835)&#13;
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)&#13;
+	... 53 more&#13;
+&#13;
+</error>
+    </testcase>
+    <testcase name="testSaveAndFind" classname="com.example.repo.AnimeRepositoryTest" time="0.0" displayname="testSaveAndFind()" uniqueid="[engine:junit-jupiter]/[class:com.example.repo.AnimeRepositoryTest]/[method:testSaveAndFind()]">
+      <error>java.lang.IllegalStateException: ApplicationContext failure threshold (1) exceeded: skipping repeated attempt to load context for [MergedContextConfiguration@735167e1 testClass = com.example.repo.AnimeRepositoryTest, locations = [], classes = [com.example.AnimeApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@67689c81 key = [org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration, org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration, org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManagerAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration, org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration, org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration, org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcClientAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@c27d163, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5e39850, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@29f0c4f2, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@34be3d80, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@319e5c63, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@26e412ef, org.springframework.boot.test.context.SpringBootTestAnnotation@8b7026b9], contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]&#13;
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:145)&#13;
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)&#13;
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142)&#13;
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)&#13;
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)&#13;
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)&#13;
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)&#13;
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)&#13;
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)&#13;
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)&#13;
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)&#13;
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)&#13;
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)&#13;
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)&#13;
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)&#13;
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="com.example.exception.GlobalExceptionHandlerTest" time="1.242" displayname="GlobalExceptionHandlerTest" uniqueid="[engine:junit-jupiter]/[class:com.example.exception.GlobalExceptionHandlerTest]">
+    <testcase name="testResourceNotFoundException" classname="com.example.exception.GlobalExceptionHandlerTest" time="1.24" displayname="testResourceNotFoundException()" uniqueid="[engine:junit-jupiter]/[class:com.example.exception.GlobalExceptionHandlerTest]/[method:testResourceNotFoundException()]"/>
+    <testcase name="testGlobalExceptionHandler" classname="com.example.exception.GlobalExceptionHandlerTest" time="0.002" displayname="testGlobalExceptionHandler()" uniqueid="[engine:junit-jupiter]/[class:com.example.exception.GlobalExceptionHandlerTest]/[method:testGlobalExceptionHandler()]"/>
+  </testsuite>
+  <testsuite name="com.example.controller.AnimeControllerTest" time="0.235" displayname="AnimeControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]">
+    <testsuite name="com.example.controller.AnimeControllerTest$CreateUpdateTests" time="0.195" displayname="CreateUpdateTests" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:CreateUpdateTests]">
+      <testcase name="testUpdateAnime_NotFound" classname="com.example.controller.AnimeControllerTest.CreateUpdateTests" time="0.187" displayname="testUpdateAnime_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:CreateUpdateTests]/[method:testUpdateAnime_NotFound()]"/>
+      <testcase name="testUpdateAnime" classname="com.example.controller.AnimeControllerTest.CreateUpdateTests" time="0.003" displayname="testUpdateAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:CreateUpdateTests]/[method:testUpdateAnime()]"/>
+      <testcase name="testAddAnime" classname="com.example.controller.AnimeControllerTest.CreateUpdateTests" time="0.003" displayname="testAddAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:CreateUpdateTests]/[method:testAddAnime()]"/>
+    </testsuite>
+    <testsuite name="com.example.controller.AnimeControllerTest$DeleteTests" time="0.017" displayname="DeleteTests" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:DeleteTests]">
+      <testcase name="testDeleteAnime" classname="com.example.controller.AnimeControllerTest.DeleteTests" time="0.014" displayname="testDeleteAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:DeleteTests]/[method:testDeleteAnime()]"/>
+      <testcase name="testDeleteAnime_NotFound" classname="com.example.controller.AnimeControllerTest.DeleteTests" time="0.003" displayname="testDeleteAnime_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:DeleteTests]/[method:testDeleteAnime_NotFound()]"/>
+    </testsuite>
+    <testsuite name="com.example.controller.AnimeControllerTest$ReadTests" time="0.02" displayname="ReadTests" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]">
+      <testcase name="testReadAnime_NotFound" classname="com.example.controller.AnimeControllerTest.ReadTests" time="0.006" displayname="testReadAnime_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]/[method:testReadAnime_NotFound()]"/>
+      <testcase name="testReadAnime" classname="com.example.controller.AnimeControllerTest.ReadTests" time="0.002" displayname="testReadAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]/[method:testReadAnime()]"/>
+      <testcase name="testReadOneAnime_NotFound" classname="com.example.controller.AnimeControllerTest.ReadTests" time="0.003" displayname="testReadOneAnime_NotFound()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]/[method:testReadOneAnime_NotFound()]"/>
+      <testcase name="testReadAllAnime" classname="com.example.controller.AnimeControllerTest.ReadTests" time="0.004" displayname="testReadAllAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]/[method:testReadAllAnime()]"/>
+      <testcase name="testReadOneAnime" classname="com.example.controller.AnimeControllerTest.ReadTests" time="0.003" displayname="testReadOneAnime()" uniqueid="[engine:junit-jupiter]/[class:com.example.controller.AnimeControllerTest]/[nested-class:ReadTests]/[method:testReadOneAnime()]"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="com.example.AnimeApplicationTests" time="0.017" displayname="AnimeApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.example.AnimeApplicationTests]">
+    <testcase name="contextLoads" classname="com.example.AnimeApplicationTests" time="0.017" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.example.AnimeApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>
